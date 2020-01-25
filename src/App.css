@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+.flex-grid {
+  display: flex;
+}
+.flex-grid .col {
+  flex: 1;
+}
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-evenly;
+}
+.flex-grid-thirds .col {
+  width: 32%;
+  height: 100px;
+  margin:20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 20px;
+}
+.flex-grid { 
+  margin: 0 0 20px 0;
+}
+.col {
+  background: salmon;
+  padding: 20px;
+  font-size: 3rem;
+  color: white;
+
+}
+.number{
+  font-size: large;
+}

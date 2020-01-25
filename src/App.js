@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+
+  const [color, setColor] = useState('salmon');
+
+  const handleColor = event => {
+    setColor(`blue`)
+    console.log(event.target)
+    event.target.style.backgroundColor = color
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="flex-grid-thirds">
+        <div className="col" id="1" onClick={handleColor} >1</div>
+        <div className="col" id="2" onClick={handleColor} >2</div>
+        <div className="col" id="3" onClick={handleColor} >3</div>
+      </div>
+      <div className="flex-grid-thirds">
+        <div className="col" id="4" onClick={handleColor} >4</div>
+        <div className="col" id="5" onClick={handleColor} >5</div>
+        <div className="col" id="6" onClick={handleColor} >6</div>
+      </div>
+      <div className="flex-grid-thirds">
+        <div className="col" id="7" onClick={handleColor} >7</div>
+        <div className="col" id="8" onClick={handleColor} >8</div>
+        <div className="col" id="9" style={{}} onClick={handleColor} >9</div>
+      </div>
+
+
     </div>
   );
 }
